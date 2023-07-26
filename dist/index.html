@@ -7,14 +7,27 @@
     <link rel="stylesheet" href="output.css" />
     <script src="script.js"></script>
   </head>
-  <body class="bg-red-400">
-    <main id="main">
-      <div id="main-div" class="bg-orange-400">
-        <input type="text" id="input" />
-        <button id="submit-button" onclick="handleSubmit()">Submit</button>
+  <body class="" class="">
+    <main
+      id="main"
+      class="flex justify-center items-center bg-sky-500 h-screen"
+    >
+      <div id="main-div" class="flex items-center justify-center grid gap-1">
+        <input
+          type="text"
+          id="input"
+          class="border-2 border-gray-500 w-48 h-10"
+        />
+        <button
+          id="submit-button"
+          onclick="handleSubmit()"
+          class="font-bold text-2xl text-gray-900 bg-yellow-300 w-28 h-10"
+        >
+          Submit
+        </button>
       </div>
 
-      <div id="maintext" class="bg-yellow-500"></div>
+      <div id="maintext" class="font-semibold text-white text-2xl m-3"></div>
     </main>
   </body>
 </html>
