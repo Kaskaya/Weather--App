@@ -35,7 +35,9 @@ const addWeather = (data) => {
 
   weather.innerHTML = `
   <h1 class="text-4xl">${region}</h1>
-  <h1 class="flex justify-center text-4xl"><img src="${weatherIcon}" width="110" 
+  <h1 class="flex justify-center text-4xl"><img src="${
+    "https:" + weatherIcon
+  }" width="110" 
   height="110"></h1>
   <h1 class="text-4xl font-bold text-white"> ${tempCelsius}°C </h1>
   `;
