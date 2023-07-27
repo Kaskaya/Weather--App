@@ -34,7 +34,7 @@ const addWeather = (data, cityName) => {
   weather.classList.add("weather");
 
   weather.innerHTML = `
-  <h2>${tempCelsius}°C</h2>
+  <h1 class="text-5xl font-bold text-white border-black">${tempCelsius}°C</h1>
   <h1>${weatherText}</h1>
   <h1>${cityName}</h1>
   `;
