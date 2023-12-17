@@ -648,6 +648,10 @@ html {
   padding-left: 1rem;
 }
 
+.pl-8{
+  padding-left: 2rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -665,6 +669,11 @@ html {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold{
