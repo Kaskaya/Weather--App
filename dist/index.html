@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="output.css" />
     <script src="script.js"></script>
   </head>
-  <body class="" class="">
-    <main
-      id="main"
-      class="flex justify-center items-center flex-col bg-gradient-to-r from-cyan-500 to-blue-500 h-screen"
-    >
-      <div id="main-div" class="flex justify-center items-center">
+  <body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <main id="main" class="h-screen flex justify-center items-center flex-col">
+      <div id="main-div" class="grid grid-cols-2 gap-1">
         <input
           type="text"
           id="input"
@@ -24,12 +21,12 @@
                 handleSubmit();
               }
             });"
-          class="text-xl border-2 border-gray-100 w-56 h-14 m-2 rounded-l-full mb-2 shadow-md pl-4"
+          class="text-xl border-2 border-gray-100 w-56 h-14 mr-2 rounded-l-full shadow-md pl-4 z-10"
         />
         <button
           id="submit-button"
           onclick="handleSubmit()"
-          class="font-semibold text-3xl text-white bg-yellow-400 px-8 py-2.5 rounded-r-full shadow-md hover:bg-amber-400"
+          class="font-semibold text-3xl text-white bg-yellow-400 m-0 py-2.5 rounded-r-full shadow-md hover:bg-amber-400"
         >
           Submit
         </button>
