@@ -36,7 +36,7 @@ async function getData(cityName) {
     if (cityName.toLowerCase() == result.location.name.toLowerCase()) {
       addWeather(result);
     } else {
-      alert("There is no city with that name");
+      alert(`There is no city called ${cityName}`);
     }
   } catch (error) {
     console.error(error);
