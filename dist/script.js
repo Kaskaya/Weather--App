@@ -1,6 +1,23 @@
 const main = document.getElementById("main");
 const button = document.getElementById("submit-button");
 
+//Covert characters to english
+String.prototype.turkishtoEnglish = function () {
+  return this.replace("Ğ", "g")
+    .replaceAll("Ü", "u")
+    .replaceAll("Ş", "s")
+    .replaceAll("I", "i")
+    .replaceAll("İ", "i")
+    .replaceAll("Ö", "o")
+    .replaceAll("Ç", "c")
+    .replaceAll("ğ", "g")
+    .replaceAll("ü", "u")
+    .replaceAll("ş", "s")
+    .replaceAll("ı", "i")
+    .replaceAll("ö", "o")
+    .replaceAll("ç", "c");
+};
+
 const url = (cityName) =>
   `https://weatherapi-com.p.rapidapi.com/current.json?q=${cityName}.1%2C-0.13`;
 const options = {
@@ -16,9 +33,11 @@ async function getData(cityName) {
     const response = await fetch(url(cityName), options);
     const result = await response.json();
 
-    addWeather(result);
-
-    console.log(result);
+    if (cityName.toLowerCase() == result.location.name.toLowerCase()) {
+      addWeather(result);
+    } else {
+      alert("There is no city with that name");
+    }
   } catch (error) {
     console.error(error);
   }
@@ -46,7 +65,7 @@ const addWeather = (data) => {
 
 function handleSubmit() {
   const input = document.getElementById("input");
-  const cityName = input.value;
+  const cityName = input.value.turkishtoEnglish();
   input.value = "";
   if (cityName) {
     getData(cityName);
